@@ -1,0 +1,15 @@
+<div>
+  <label for="name">Workers: </label>
+  <input type="text" id="name" #name/> <br><br>
+
+  <label for="salary">Salary: </label>
+  <input type="text" id="salary" #salary /> <br><br>
+
+  <button (click)="addStudent(name.value, salary.value)">Add</button> <br><br>
+  <button (click)="calculate()">calculate</button>
+
+  <!-- <p>Result: {{ result }}</p>  -->
+</div>
+
+
+<child-comp [students]="students" [maxsalary]="maxsalary" [worker]="worker"></child-comp>

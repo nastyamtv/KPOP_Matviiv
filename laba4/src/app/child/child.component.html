@@ -1,0 +1,10 @@
+<div *ngIf="students && students.length">
+  <h2>List of workers and their salary:</h2>
+  <ul>
+      <li *ngFor="let student of students">
+          {{ student.name }} - {{ student.salary }}
+      </li>
+  </ul>
+  <!--<p>Student max salary: {{ maxsalary }}</p>  -->
+  <p *ngIf="maxsalary">Worker max salary: {{ maxsalary }} - {{ worker }}</p>
+</div>
