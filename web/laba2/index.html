@@ -1,0 +1,450 @@
+<!DOCTYPE html>
+<html lang="ua">
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta charset="UTF-8">
+        <link rel="stylesheet" href="styles.css">
+        <title>Lab2</title>
+    </head>
+
+    <body>
+        <header class="header-container">
+            <a href="#" class="header_title">Teachinder</a>
+            <div class="header_search">
+                <form>
+                    <input type="text" placeholder="Name, note or age to search" class="search-bar">
+                    <button type="submit" class="search-btn">Search</button>
+                </form>
+            </div>
+        </header>
+        
+        <nav>
+            <div class="nav-container">
+                <div class="nav_links">
+                    <a href="#" class="nav_link">Teachers</a>
+                    <a href="#" class="nav_link">Statistics</a>
+                    <a href="#" class="nav_link">Favorites</a>
+                    <a href="#" class="nav_link">About</a>
+                </div>
+                <button type="button" class="btn-add-teacher modal-toggle" id="myBtn">Add teacher</button>
+            </div>
+        </nav>
+        
+
+        <main>
+
+            <h1>Top Teachers</h1>
+            
+            <div class="top_teachers">
+                <div class="filters">
+
+                    <div class="teacher_filter">
+                        <label for="age">Age</label>
+                        <select id="age" name="age" size="1">
+                            <option value="18-30">18-30</option>
+                            <option value="30-40">30-40</option>
+                            <option value="40-50">40-50</option>
+                            <option value="50-60">50-60</option>
+                        </select>
+                    </div>
+
+                    <div class="teacher_filter">
+                        <label for="region">Region:</label>
+                        <select id="region" name="region" size="1">
+                            <option value="Europe">Europe</option>
+                            <option value="Asia">Asia</option>
+                            <option value="Africa">Africa</option>
+                            <option value="Australia">Australia</option>
+                            <option value="North America">North America</option>
+                            <option value="South America">South America</option>
+                        </select>
+                    </div>
+
+                    <div class="teacher_filter">
+                        <label for="sex">Sex:</label>
+                        <select name="sex" id="sex" size="1">
+                            <option value="male">Male</option>
+                            <option value="female">Female</option>
+                        </select>
+                    </div>
+
+                    <div class="teacher_filter">
+                        <input type="checkbox" id="photo" name="photo">
+                        <label for="photo">Only with photo</label>
+                    </div>
+
+                    <div class="teacher_filter">
+                        <input type="checkbox" id="favorites" name="favorites">
+                        <label for="favorites">Only favorites</label>
+                    </div>
+                </div>
+
+                <div class="teachers">
+                    <div class="teacher-compact-info modal-teacher-toggle">
+                        <div class="photo-container">
+                            <img src="teacher.png" alt="Зображення викладача" title="Placeholder" class="teacher-photo">
+                        </div>
+
+                        <p class="teacher-name">Seraphina<br>Moonbeam</p>
+                        <p class="teacher-specialty">Medicine</p>
+                        <p class="teacher-location">South Korea</p>
+                    </div>
+
+                    <div class="teacher-compact-info modal-teacher-toggle">
+                        <div class="photo-container">
+                            <img src="teacher.png" alt="Зображення викладача" title="Placeholder" class="teacher-photo">
+                        </div>
+                        <p class="teacher-name">Seraphina<br>Moonbeam</p>
+                        <p class="teacher-specialty">Medicine</p>
+                        <p class="teacher-location">South Korea</p>
+                    </div>
+
+                    <div class="teacher-compact-info modal-teacher-toggle">
+                        <div class="photo-container">
+                            <img src="teacher.png" alt="Зображення викладача" title="Placeholder" class="teacher-photo">
+                        </div>
+                        <p class="teacher-name">Seraphina<br>Moonbeam</p>
+                        <p class="teacher-specialty">Medicine</p>
+                        <p class="teacher-location">South Korea</p>
+                    </div>
+
+                    <div class="teacher-compact-info modal-teacher-toggle">
+                        <div class="teacher-profile">
+                            <div class="photo-container">
+                                <img src="teacher.png" alt="Зображення викладача" title="Placeholder" class="teacher-photo">
+                            </div>
+                            <span class="favorite-star">&#9733;</span>
+                        </div>
+                        <p class="teacher-name">Seraphina<br>Moonbeam</p>
+                        <p class="teacher-specialty">Medicine</p>
+                        <p class="teacher-location">South Korea</p>
+                    </div>
+
+                    <div class="teacher-compact-info modal-teacher-toggle">
+                        <div class="teacher-profile">
+                            <div class="photo-container">
+                                <img src="teacher.png" alt="Зображення викладача" title="Placeholder" class="teacher-photo">
+                            </div>
+                            <span class="favorite-star">&#9733;</span>
+                        </div>
+                        <p class="teacher-name">Seraphina<br>Moonbeam</p>
+                        <p class="teacher-specialty">Medicine</p>
+                        <p class="teacher-location">South Korea</p>
+                    </div>
+
+                    <div class="teacher-compact-info modal-teacher-toggle">
+                        <div class="photo-container">
+                            <img src="teacher.png" alt="Зображення викладача" title="Placeholder" class="teacher-photo">
+                        </div>
+                        <p class="teacher-name">Seraphina<br>Moonbeam</p>
+                        <p class="teacher-specialty">Medicine</p>
+                        <p class="teacher-location">South Korea</p>
+                    </div>
+
+                    <div class="teacher-compact-info modal-teacher-toggle">
+                        <div class="photo-container">
+                            <img src="teacher.png" alt="Зображення викладача" title="Placeholder" class="teacher-photo">
+                        </div>
+                        <p class="teacher-name">Seraphina<br>Moonbeam</p>
+                        <p class="teacher-specialty">Medicine</p>
+                        <p class="teacher-location">South Korea</p>
+                    </div>
+                </div>
+            </div>
+
+            <h2>Statistics</h2>
+
+            <div class="statistics">
+                <table class="table" id="table">
+                    <thead class="table-head">
+                        <tr>
+                            <th class="sortable" data-column="name">Name <span class="arrow">&darr;</span></th>
+                            <th class="sortable" data-column="specialty">Specialty <span class="arrow">&darr;</span></th>
+                            <th class="sortable" data-column="age">Age <span class="arrow">&darr;</span></th>
+                            <th class="sortable" data-column="gender">Gender <span class="arrow">&darr;</span></th>
+                            <th class="sortable" data-column="nationality">Nationality <span class="arrow">&darr;</span></th>
+                        </tr>
+                    </thead>
+
+                    <tbody>
+                        <tr>
+                            <td class="table-name">Ahri Ignite</td>
+                            <td>Dancer</td>
+                            <td>46</td>
+                            <td>Female</td>
+                            <td>Germany</td>
+                        </tr>
+
+                        <tr>
+                            <td class="table-name">Aphelios Lunaria</td>
+                            <td>Computer Science</td>
+                            <td>37</td>
+                            <td>Male</td>
+                            <td>Austria</td>
+                        </tr>
+
+                        <tr>
+                            <td class="table-name">Irelia Bilter</td>
+                            <td>Warrior</td>
+                            <td>21</td>
+                            <td>Female</td>
+                            <td>Ireland</td>
+                        </tr>
+
+                        <tr>
+                            <td class="table-name">Luxanna Barrier</td>
+                            <td>Scientist</td>
+                            <td>21</td>
+                            <td>Female</td>
+                            <td>England</td>
+                        </tr>
+
+                        <tr>
+                            <td class="table-name">Nautilus Kluk</td>
+                            <td>Diver</td>
+                            <td>77</td>
+                            <td>Male</td>
+                            <td>Portugal</td>
+                        </tr>
+
+                        <tr>
+                            <td class="table-name">Sett White</td>
+                            <td>Boxer</td>
+                            <td>43</td>
+                            <td>Male</td>
+                            <td>Czech</td>
+                        </tr>
+
+                        <tr>
+                            <td class="table-name">Zoe Cactus</td>
+                            <td>Chess</td>
+                            <td>15</td>
+                            <td>Female</td>
+                            <td>USA</td>
+                        </tr>
+
+                        <tr>
+                            <td class="table-name">Orianna Bocriard</td>
+                            <td>Inventor</td>
+                            <td>78</td>
+                            <td>Female</td>
+                            <td>Mexico</td>
+                        </tr>
+
+                        <tr>
+                            <td class="table-name">Ksante Knight</td>
+                            <td>Biology</td>
+                            <td>44</td>
+                            <td>Male</td>
+                            <td>Scotland</td>
+                        </tr>
+
+                        <tr>
+                            <td class="table-name">Brier Blackrom</td>
+                            <td>Statistics</td>
+                            <td>31</td>
+                            <td>Female</td>
+                            <td>France</td>
+                        </tr>
+                    </tbody>
+                </table>
+                
+                <div class="pagination">
+                    <a href="#" class="page-link active">1</a>
+                    <a href="#" class="page-link">2</a>
+                    <a href="#" class="page-link">3</a>
+                    <a href="#" class="page-link">...</a>
+                    <a href="#" class="page-link">Last</a>
+                </div>
+                <div></div>
+            </div>
+
+
+            <h2>Favorites</h2>
+
+            <div class="favorite-teachers">
+                <div class="teachers">
+
+                    <div class="teacher-compact-info modal-teacher-toggle">
+                        <div class="photo-container">
+                            <img src="teacher.png" alt="Зображення викладача" title="Placeholder" class="teacher-photo">
+                        </div>
+                        <p class="teacher-name">Seraphina<br>Moonbeam</p>
+                        <p class="teacher-specialty">Medicine</p>
+                        <p class="teacher-location">South Korea</p>
+                    </div>
+    
+                    <div class="teacher-compact-info modal-teacher-toggle">
+                        <div class="photo-container">
+                            <img src="teacher.png" alt="Зображення викладача" title="Placeholder" class="teacher-photo">
+                        </div>
+                        <p class="teacher-name">Seraphina<br>Moonbeam</p>
+                        <p class="teacher-specialty">Medicine</p>
+                        <p class="teacher-location">South Korea</p>
+                    </div>
+    
+                    <div class="teacher-compact-info modal-teacher-toggle">
+                        <div class="photo-container">
+                            <img src="teacher.png" alt="Зображення викладача" title="Placeholder" class="teacher-photo">
+                        </div>
+                        <p class="teacher-name">Seraphina<br>Moonbeam</p>
+                        <p class="teacher-specialty">Medicine</p>
+                        <p class="teacher-location">South Korea</p>
+                    </div>
+    
+                    <div class="teacher-compact-info modal-teacher-toggle">
+                        <div class="photo-container">
+                            <img src="teacher.png" alt="Зображення викладача" title="Placeholder" class="teacher-photo">
+                        </div>
+                        <p class="teacher-name">Seraphina<br>Moonbeam</p>
+                        <p class="teacher-specialty">Medicine</p>
+                        <p class="teacher-location">South Korea</p>
+                    </div>
+    
+                    <div class="teacher-compact-info modal-teacher-toggle">
+                        <div class="photo-container">
+                            <img src="teacher.png" alt="Зображення викладача" title="Placeholder" class="teacher-photo">
+                        </div>
+                        <p class="teacher-name">Seraphina<br>Moonbeam</p>
+                        <p class="teacher-specialty">Medicine</p>
+                        <p class="teacher-location">South Korea</p>
+                    </div>
+                </div>
+            </div>
+
+            <footer>
+                <div class="lorem-ipsum">
+                    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
+                    <p>All the Lorem Ipsum generators on the Internet tend to repeat predefined chunks as necessary, making this the first true generator on the Internet.</p>
+                    <p>What is Lorem Ipsum?</p>
+                </div>
+            </footer>
+            <nav>
+                <div class="nav-container">
+                    <div class="nav_links">
+                        <a href="#" class="nav_link">Teachers</a>
+                        <a href="#" class="nav_link">Statistics</a>
+                        <a href="#" class="nav_link">Favorites</a>
+                        <a href="#" class="nav_link">About</a>
+                    </div>
+                    <button type="button" class="btn-add-teacher modal-toggle" id="myBtn">Add teacher</button>
+                </div>
+            </nav>
+            </div>
+
+
+            <div id="modal" class="modal">
+                <div class="modal-content">
+                    <span class="close">&times;</span>
+
+                    <div class="modal-header">
+                        <h3>Add Teacher</h3>
+                    </div>
+                    <div class="modal-body"></div>
+                        <form id="teacherForm">
+
+                            <div class="form-group">
+                                <label for="name">Name:</label>
+                                <input type="text" id="name" name="name" placeholder="Enter name" required>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="specialty">Specialty:</label>
+                                <select id="specialty" name="specialty" required>
+                                    <option value="Medicine">Medicine</option>
+                                    <option value="Seller">Seller</option>
+                                    <option value="Pilot">Pilot</option>
+                                    <option value="Art">Art</option>
+                                </select>
+                            </div>
+
+                            <div class="form-group double">
+                                <div>
+                                    <label for="country">Country:</label>
+                                    <select id="country" name="country" required>
+                                        <option value="South Korea">South Korea</option>
+                                        <option value="Canada">Canada</option>
+                                        <option value="Germany">Germany</option>
+                                        <option value="UK">UK</option>
+                                    </select>
+                                </div>
+                                <div>
+                                    <label for="city">City:</label>
+                                    <input type="text" id="city" name="city" required>
+                                </div>
+                            </div>
+
+                            <div class="form-group double">
+                                <div>
+                                    <label for="email">Email:</label>
+                                    <input type="email" id="email" name="email" required>
+                                </div>
+                                <div>
+                                    <label for="phone">Phone:</label>
+                                    <input type="tel" id="phone" name="phone" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" required>
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <div>
+                                    <label for="dob">Date of Birth:</label>
+                                    <input type="date" id="dob" name="dob" required>
+                                </div>
+                            </div>
+
+                            <div class="form-group radio-buttons">
+                                <label>Sex:</label>
+                                <input type="radio" id="male" name="sex" value="male" required>
+                                <label-radio for="male">Male</label-radio>
+                                <input type="radio" id="female" name="sex" value="female" required>
+                                <label-radio for="female">Female</label-radio>
+                            </div>
+
+                            <div class="form-group">
+                                <div>
+                                    <label for="notes">Notes (optional):</label>
+                                    <textarea id="notes" name="notes" rows="4" cols="500"></textarea>
+                                </div>
+                            </div>
+                            <button type="submit-add">Add</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+            
+            
+            <div class="modalTeacher" id="modalTeacher">
+                <div class="modal-teacher-content">
+                    <div class="modal-header">
+                        <h3>Teacher Info</h3>
+                        <span class="close">&times;</span>
+                    </div>
+                    <div class="modal-body">
+                        <div class="teacher-card modal-toggle">
+                            <div class="teacher-photo-wrapper">
+                                <img src="teacher.png" alt="Teacher Photo" class="teacher-photo-cart">
+                            </div>
+                            <div class="teacher-info">
+                                <h2>Seraphina Moonbeam</h2>
+                                <p>Medicine</p>
+                                <p>25, Female</p>
+                                <p>Seoul, South Korea</p>
+                                <p>Email: <a href="mailto: serafmoon@gmail.com">serafmoon@gmail.com</a></p>
+                                <p>Phone number: <a href="tel: (999) 999-9999">(999) 999-9999</a></p>
+                            </div>
+                        </div>
+                        <div class="teacher-description">
+                            <p>And she was not alone. Vastayan rebellions were growing across Ionia, seeking retribution against mortals. The time for negotiation was over. Xayah was determined to use her lethal quills in battle, to release the land’s wild magic. </p>
+                            <a href="https://www.google.com/maps/place/Seoul,+South+Korea/@37.8114575,126.3646381,8.46z/data=!4m15!1m8!3m7!1s0x357ca2012d5c39cf:0x7e11eca1405bf29b!2sSeoul,+South+Korea!3b1!8m2!3d37.5518911!4d126.9917937!16zL20vMGhzcWY!3m5!1s0x357ca2012d5c39cf:0x7e11eca1405bf29b!8m2!3d37.5518911!4d126.9917937!16zL20vMGhzcWY?entry=ttu" class="link">toggle-map</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+                    
+        </main>
+
+        <script src="script.js"></script>
+    </body>
+</html>
+
+
